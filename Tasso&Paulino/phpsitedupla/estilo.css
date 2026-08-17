@@ -1,0 +1,205 @@
+body {
+  margin: 0;
+  font-family: "Georgia", serif;
+  background-color: #111;
+  color: #f5f5f5;
+  line-height: 1.6;
+}
+.header {
+  background: linear-gradient(90deg, #1a1a1a, #000);
+  color: #d4af37;
+  padding: 30px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #1c1c1c;
+  border-bottom: 2px solid #d4af37;
+}
+.navbar li {
+  float: left;
+}
+.navbar li a {
+  display: block;
+  color: #f5f5f5;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+}
+.navbar li a:hover {
+  background-color: #d4af37;
+  color: #111;
+}
+.navbar::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.container {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+.section h2 {
+  margin-bottom: 15px;
+  border-bottom: 2px solid #d4af37;
+  padding-bottom: 5px;
+  color: #d4af37;
+  font-family: "Times New Roman", serif;
+}
+.card {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  padding: 20px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+  transition: transform 0.2s ease;
+}
+.card img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.card:hover {
+  transform: none;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+}
+.footer {
+  background: #000;
+  color: #d4af37;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 14px;
+  border-top: 2px solid #d4af37;
+}
+.newsletter {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  text-align: center;
+  padding: 30px 20px;
+  margin: 40px auto;
+  max-width: 600px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+}
+.newsletter h2 {
+  color: #d4af37;
+  margin-bottom: 10px;
+  font-family: "Times New Roman", serif;
+}
+.newsletter p {
+  margin-bottom: 20px;
+  color: #ccc;
+}
+.newsletter form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.newsletter input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 250px;
+  max-width: 100%;
+  font-family: "Georgia", serif;
+}
+.newsletter button {
+  background: #d4af37;
+  border: none;
+  color: #111;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+.newsletter button:hover {
+  background: #b8902d;
+  transform: scale(1.05);
+}
+
+button {
+    background: #d4af37;
+    border: none;
+    color: #111;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #b8902d;
+}
+
+.card button {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.grid-filmes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.8);
+}
+
+.card button {
+  width: 100%;
+  margin-top: 10px;
+  background: #d4af37;
+  border: none;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.card button:hover {
+  background: #b8902d;
+}
+
+.usuario {
+  text-align: right;
+  padding: 10px 20px;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.mensagem {
+    background-color: #1f3b1f;
+    color: #7CFC00;
+    border: 1px solid #7CFC00;
+
+    padding: 15px;
+
+    width: 80%;
+    margin: 20px auto;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+    font-weight: bold;
+
+    box-shadow: 0 0 10px rgba(124, 252, 0, 0.3);
+}
