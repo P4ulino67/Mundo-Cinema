@@ -1,16 +1,24 @@
 <?php
+
 session_start();
+
+include "app/cons.php";
+require_once "app/DLL.php";
 
 $usuario = $_SESSION['usuario'];
 $produto = $_SESSION['produto'];
 $preco = $_SESSION['preco'];
 $pagamento = $_POST['pagamento'];
 
-$data = date("d/m/Y H:i");
+$data = date("Y-m-d H:i:s");
 
-$venda = "$usuario|$produto|$preco|$pagamento|$data\n";
+$consulta = "INSERT INTO vendas
+(usuario, produto, preco, pagamento, data)
+VALUES
+('$usuario', '$produto', '$preco', '$pagamento', '$data')";
 
-file_put_contents("vendas/vendas.dat", $venda, FILE_APPEND);
+banco($server, $user, $password, $db, $consulta);
 
 echo "<h2 style='color:white;text-align:center;'>Compra realizada com sucesso!</h2>";
+
 ?>
