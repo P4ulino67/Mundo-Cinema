@@ -1,31 +1,30 @@
 <?php
+
 session_start();
 
+include "app/cons.php";
+require_once "app/DLL.php";
+
 $login = $_POST['login'];
-$senha = $_POST['senha'];
+$senha = md5($_POST['senha']);
 
-$arquivo = fopen("usuarios.txt", "r");
+$consulta = "SELECT * FROM usuarios 
+WHERE login = '$login' AND senha = '$senha'";
 
-$encontrado = false;
+$resultado = banco($server, $user, $password, $db, $consulta);
 
-while (!feof($arquivo)) {
-    $linha = fgets($arquivo);
+if ($linha = $resultado->fetch_assoc()) {
 
-    $dados = explode(";", $linha);
+    $_SESSION['usuario'] = $linha['nome'];
 
-    if (count($dados) >= 9) {
-        if ($dados[7] == $login && trim($dados[8]) == $senha) {
-            $encontrado = true;
-            $_SESSION['usuario'] = $dados[0]; // nome
-        }
-    }
-}
-
-fclose($arquivo);
-
-if ($encontrado) {
     header("Location: index.php");
+    exit();
+
 } else {
+
     header("Location: login.php?erro=1");
+    exit();
+
 }
+
 ?>

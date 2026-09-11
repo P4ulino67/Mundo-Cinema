@@ -1,5 +1,8 @@
 <?php
 
+include "app/cons.php";
+require_once "app/DLL.php";
+
 $nome = $_POST['nome'];
 $cpf = $_POST['cpf'];
 $endereco = $_POST['endereco'];
@@ -8,13 +11,16 @@ $cidade = $_POST['cidade'];
 $estado = $_POST['estado'];
 $cep = $_POST['cep'];
 $login = $_POST['login'];
-$senha = $_POST['senha'];
+$senha = md5($_POST['senha']);
 
-$arquivo = fopen("usuarios.txt", "a");
+$consulta = "INSERT INTO usuarios 
+(nome, cpf, endereco, bairro, cidade, estado, cep, login, senha) 
+VALUES 
+('$nome', '$cpf', '$endereco', '$bairro', '$cidade', '$estado', '$cep', '$login', '$senha')";
 
-fwrite($arquivo, "$nome;$cpf;$endereco;$bairro;$cidade;$estado;$cep;$login;$senha\n");
-
-fclose($arquivo);
+banco($server, $user, $password, $db, $consulta);
 
 header("Location: login.php");
+exit();
+
 ?>
