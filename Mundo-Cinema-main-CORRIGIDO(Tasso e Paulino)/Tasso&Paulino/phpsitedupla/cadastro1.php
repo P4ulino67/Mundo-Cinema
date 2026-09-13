@@ -44,33 +44,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <div class="container">
     <div class="card">
-
         <h2>Criar Conta</h2>
-
         <form action="cadastro1.php" method="POST">
-
             <input type="text" name="nome" placeholder="Nome completo" required><br><br>
-
             <input type="text" name="cpf" placeholder="CPF" required><br><br>
-
             <input type="text" name="endereco" placeholder="Endereço" required><br><br>
-
             <input type="text" name="bairro" placeholder="Bairro" required><br><br>
-
             <input type="text" name="cidade" placeholder="Cidade" required><br><br>
-
             <input type="text" name="estado" placeholder="Estado" required><br><br>
-
             <input type="text" name="cep" placeholder="CEP" required><br><br>
-
             <input type="text" name="login" placeholder="Login" required><br><br>
-
             <input type="password" name="senha" placeholder="Senha" required><br><br>
-
             <button type="submit">Cadastrar</button>
-
         </form>
-
     </div>
 </div>
 
