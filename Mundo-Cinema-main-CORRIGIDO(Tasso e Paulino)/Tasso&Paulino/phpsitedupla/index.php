@@ -16,7 +16,6 @@ if (!isset($_SESSION['carrinho'])) {
         <div class="topo-site">
             <div class="titulo-site">
                 <img src="img/logo-mundo-cinema.jpg" alt="Mundo Cinema" class="logo-site">
-                <p> Sua loja de filmes favorita </p>
             </div>
 
             <div class="usuario">
