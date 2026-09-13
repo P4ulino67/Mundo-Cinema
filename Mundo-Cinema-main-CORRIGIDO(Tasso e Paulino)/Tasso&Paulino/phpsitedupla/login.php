@@ -17,8 +17,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($linha = $resultado->fetch_assoc()) {
 
         $_SESSION['usuario'] = $linha['nome'];
-
-        // Se o usuário tentou comprar um filme antes de logar, completa a adição ao carrinho agora
         if (!empty($_POST['produto'])) {
             if (!isset($_SESSION['carrinho'])) {
                 $_SESSION['carrinho'] = [];
@@ -84,5 +82,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <p>&copy; Tasso Farias e Paulino Mendes</p>
     </div>
 </body>
-
 </html>
