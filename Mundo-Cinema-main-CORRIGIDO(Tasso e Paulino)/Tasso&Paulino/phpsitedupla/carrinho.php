@@ -17,17 +17,11 @@ if (!isset($_SESSION['carrinho'])) {
     <title>Carrinho</title>
     <link rel="stylesheet" href="css/estilo.css">
 </head>
-
 <body>
-
     <div class="header">
-
         <h1>🛒 Seu Carrinho</h1>
-
     </div>
-
     <div class="container">
-
         <div class="section">
 
             <?php
@@ -37,9 +31,7 @@ if (!isset($_SESSION['carrinho'])) {
                 echo "
                 <div class='card'>
 
-                    <h2>
-                        Seu carrinho está vazio.
-                    </h2>
+                    <h2> Seu carrinho está vazio. </h2>
 
                     <br>
 
@@ -53,32 +45,21 @@ if (!isset($_SESSION['carrinho'])) {
                 ";
 
             } else {
-
+                
                 $total = 0;
-
                 foreach ($_SESSION['carrinho'] as $indice => $item) {
-
                     $produto_seguro = htmlspecialchars($item['produto']);
                     $preco_seguro = htmlspecialchars($item['preco']);
-
                     echo "
                     <div class='card'>
-
-                        <h2>
-                            {$produto_seguro}
-                        </h2>
-
-                        <p>
-                            Preço: R$ {$preco_seguro}
-                        </p>
-
+                        <h2> {$produto_seguro} </h2>
+                        <p> Preço: R$ {$preco_seguro} </p>
                         <form action='remover.php' method='post'>
                             <input type='hidden' name='id' value='{$indice}'>
                             <button type='submit'>
                                 Remover
                             </button>
                         </form>
-
                     </div>
                     ";
 
@@ -88,30 +69,17 @@ if (!isset($_SESSION['carrinho'])) {
                 echo "
                 <div class='card'>
 
-                    <h2>
-                        Total: R$ $total
-                    </h2>
-
+                    <h2> Total: R$ $total </h2>
                     <br>
-
                     <form action='finalizar.php' method='post'>
-
-                        <button type='submit'>
-                            Finalizar Compra
-                        </button>
-
+                        <button type='submit'> Finalizar Compra </button>
                     </form>
-
                     <br>
-
                     <a href='index.php'>
-
                         <button>
                             Continuar Comprando
                         </button>
-
                     </a>
-
                 </div>
                 ";
             }
@@ -119,9 +87,6 @@ if (!isset($_SESSION['carrinho'])) {
             ?>
 
         </div>
-
     </div>
-
 </body>
-
 </html>
