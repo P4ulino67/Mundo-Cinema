@@ -1,6 +1,6 @@
 # Mundo do Cinema
 
-Site de e-commerce para compra de filmes, desenvolvido em PHP com banco de dados MySQL/MariaDB. Permite que o usuário navegue pelo catálogo, crie uma conta, faça login, monte um carrinho de compras e finalize o pedido.
+Site para compra de filmes, desenvolvido em PHP com banco de dados MySQL. Permite que o usuário navegue pelo catálogo, crie uma conta, faça login, monte um carrinho de compras e finalize o pedido.
 
 ## Funcionalidades
 
