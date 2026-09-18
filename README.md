@@ -48,3 +48,7 @@ CREATE TABLE IF NOT EXISTS vendas (
   pagamento VARCHAR(50)
 );
 ```
+<img width="913" height="553" alt="image" src="https://github.com/user-attachments/assets/f2a76253-a988-459b-a56b-12e5bc214708" />
+
+<img width="928" height="353" alt="image" src="https://github.com/user-attachments/assets/49912dd1-cb88-43bd-bcd6-1dfb87cfcb9d" />
+
